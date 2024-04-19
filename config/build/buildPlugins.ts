@@ -6,7 +6,7 @@ import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import path from "path";
-// import CopyPlugin from "copy-webpack-plugin"
+import CopyPlugin from "copy-webpack-plugin"
 
 
 export function buildPlugins({mode, paths, analyzer , platform}: BuildOptions): Configuration['plugins'] {
@@ -33,12 +33,12 @@ export function buildPlugins({mode, paths, analyzer , platform}: BuildOptions): 
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename:'css/[name].[contenthash:8].css',
         }))
-        // plugins.push( new CopyPlugin({
-        //     patterns: [
-        //          Пример работы плагина 
-        //       { from: path.resolve(paths.public, 'change'), to: path.resolve(paths.output , 'change' ) },
-        //     ],
-        //   }),)
+        plugins.push( new CopyPlugin({
+            patterns: [
+                //  Пример работы плагина 
+              { from: path.resolve(paths.public, 'change'), to: path.resolve(paths.output , 'change' ) },
+            ],
+          }),)
         
         if(analyzer){
             plugins.push(new BundleAnalyzerPlugin())

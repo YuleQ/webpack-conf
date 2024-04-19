@@ -1,0 +1,31 @@
+.button{
+    background-color: green;
+    padding: 10px;
+}
+
+.value{
+    font-size: 50px;
+}
+.icon{
+    color: rgb(55, 40, 70);
+}
+@font-face {
+    font-family: 'Galgo';
+    src: url('@/assets/fonts/Galgo.otf') format('opentype');
+    src: url('@/assets/fonts/Galgo.ttf') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Ramona-Bold';
+    src: url('@/assets/fonts/Ramona-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Ramona-Light';
+    src: url('@/assets/fonts/Ramona-Light.ttf') format('truetype');
+    font-weight: lighter;
+}
+
+.test{
+    font-family: 'Galgo';
+    font-size: 30px;
+}
